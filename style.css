@@ -1,0 +1,32 @@
+/*pseudo-classes*/
+
+
+p{
+    font-size: 20px;
+    color: darkorchid;
+}
+
+.link:link{
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.link:visited{
+    color: palevioletred
+}
+
+.link:hover{
+    text-decoration: underlined overline dashed purple;
+    font-size: 30px;
+    color: yellow;
+}
+
+.link:active{
+    text-decoration: underlined solid red;
+    color: lightskyblue;
+    font-size: 18px;
+}
+
+
+/*end pseudo-classes*/
