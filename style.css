@@ -4,6 +4,8 @@ body{
     box-sizing: border-box;
 }
 
+/*Section-1 background transition*/
+
 .section-1{
     position: relative;
     width: 100%;
@@ -17,13 +19,15 @@ body{
     color: aliceblue;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -50%);
+    text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: .3rem;
     border: .1rem solid aliceblue;
     padding: 2rem;
+    z-index: 2
 }
 
 @keyframes move{
@@ -37,3 +41,47 @@ body{
         background-position: 0% 50%;
     }
 }
+
+.scroll{
+    position: fixed;
+    top: 37rem;
+    left: 70rem;
+    z-index: 2;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: aliceblue;
+    border: .5rem solid aliceblue;
+    padding: 0.5rem 2rem;
+}
+/*end section-1 background transition*/
+
+/*section-2 background video*/
+.section-2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.section-2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/*end section-2 background video*/
