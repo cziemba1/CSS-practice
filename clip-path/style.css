@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    width: 20%;
+    height: 30%;
+    background: rgb(255, 248, 230);
+    border-radius: 2rem;
+}
+
+.container .inner{
+    padding: 1rem;
+    width: 100%;
+    background: rgb(253, 186, 0);
+    border-radius: 2rem;
+    clip-path: circle(15% at 0% 0%);
+    transition: clip-path .6s ease-in-out;
+}
+
+h1{
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+    font-weight: 200;
+    color: aliceblue;
+}
+
+p{
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+
+.container:hover .inner{
+    clip-path: circle(75%);
+}
+
