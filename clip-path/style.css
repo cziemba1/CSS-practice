@@ -2,23 +2,37 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
+}
+.container-0{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Nunito', sans-serif;
 }
 
+.title {
+    position: relative;
+    color: #ed6dd0;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -600%);
+    margin: 2rem 0 10rem 4rem;
+
+}
+
+/*first box*/
 .container{
-    width: 20%;
-    height: 30%;
+    width: 15rem;
     background: rgb(255, 248, 230);
     border-radius: 2rem;
+    margin-right: 3rem;
 }
 
 .container .inner{
     padding: 1rem;
-    width: 100%;
-    background: rgb(253, 186, 0);
+    width: 13rem;
+    background: rgba(253, 186, 0, 1);
     border-radius: 2rem;
     clip-path: circle(15% at 0% 0%);
     transition: clip-path .6s ease-in-out;
@@ -40,3 +54,74 @@ p{
     clip-path: circle(75%);
 }
 
+/*end first box*/
+
+/*second box*/
+
+
+.inner-2{
+    padding: 1rem;
+    width: 150px; /*fix later with different viewports for responsive layout*/
+    background: rgb(253, 186, 0);
+    border-radius: 2rem;
+    clip-path: circle(9% at 85% 10%);
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+    margin: 0 3rem 0 3rem;
+}
+
+.x{
+    position: relative;
+    left: 8.3rem;
+    bottom: .4rem;
+    font-size: 1.3rem;
+    transition: all .6s ease-in-out;
+}
+
+.inner-2:hover{
+    clip-path: circle(75%);
+    background: #ed6dd0;
+}
+
+.inner-2:hover .x{
+    opacity: 0;
+}
+
+/*end second box*/
+
+/*third box*/
+
+.container-3{
+    width: 15rem;
+    background: url(./img/park-street-Sg9BGgvE5rk-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 2rem;
+    margin-right: 3rem;
+}
+
+.container-3 .inner-3{
+    padding: 1rem;
+    width: 13rem;
+    background: rgba(130, 57, 247, .8);
+    border-radius: 2rem;
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path .6s ease-in-out;
+}
+
+.container-3:hover .inner-3{
+    clip-path: inset(0% 0% 0% 0%);
+}
+
+.container-3:hover p{
+    color: aliceblue;
+}
+/*end third box*/
+
+#inner-4{
+    background: rgba(57, 247, 130, 0.8);
+    clip-path: inset(0% 100% 0% 0%);
+}
+
+.container-3:hover #inner-4{
+    clip-path: inset(0% 0% 0% 0%);
+}
