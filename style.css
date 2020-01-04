@@ -212,9 +212,12 @@ body{
     background-color: bisque;
     margin: auto;
     display: grid;
-    grid-template-rows: [header-start] 1fr [header-end sidebar-start main-start] 
-    1fr 1fr[main-end box-start] 1fr [sidebar-end box-end footer-start]1fr[footer-end];
-    grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+    grid-template-rows: repeat( 4, 1fr);
+    grid-template-columns: repeat(4,  1fr);
+    grid-template-areas: "header header header header"
+                        "sidebar main main main"
+                        "sidebar box-1 box-2 box-3"
+                        "footer footer footer footer";
     grid-gap: 1rem;
 
 }
@@ -228,38 +231,31 @@ body{
 }
 
 .header{
-    grid-column: col-start 1 /col-end -1    ;
-    grid-row: header-start /header-end;
+    grid-area: header;
 }
 
 .sidebar{
-    grid-column: col-start 1 /col-end 1;
-    grid-row: sidebar-start /sidebar-end;
+    grid-area: sidebar;
 }
 
 .main{
-    grid-column: col-start 2 /col-end -1;
-    grid-row: main-start /main-end;
+    grid-area: main;
 }
 
 .box-1{
-    grid-column: col-start 2 /col-end 2;
-    grid-row: box-start /box-end;
+    grid-area: box-1;
 }
 
 .box-2{
-    grid-column: col-start 3 /col-end 3;
-    grid-row: box-start /box-end;
+    grid-area: box-2;
 }
 
 .box-3{
-    grid-column: col-start 4 /col-end 4;
-    grid-row: box-start /box-end;
+    grid-area: box-3;
 }
 
 .footer{
-    grid-row: footer-start /footer-end;
-    grid-column: col-start 1 /col-end -1;
+    grid-area: footer;   
 }
 
 /*end grid-2 section*/
