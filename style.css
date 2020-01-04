@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 /*Section-1 background transition*/
@@ -134,7 +135,7 @@ body{
     letter-spacing: .2rem;
     text-transform: uppercase;
     position: absolute;
-    top: 15rem;
+    top: 8rem;
     left: 4rem;
 }
 
@@ -146,6 +147,7 @@ body{
     width: 80rem;
     top: 20rem;
     left: 6rem;
+    transform: skew(0deg, -7deg);
 }
 
 .section-sub-4{
@@ -158,3 +160,90 @@ body{
 }
 
 /*end section-4 svg*/
+
+/*grid section*/
+.grid-container{
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 1rem;
+    background-color: rgba(146, 82, 82, .3)
+}
+
+.grid-item{
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    text-align: center;
+    margin: 2rem 2rem;
+}
+
+.item-1{
+    background-color: aqua;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+.item-2{
+    background-color: rgb(123, 138, 39);
+    grid-column: 2/4;
+}
+.item-3{
+    background-color: rgb(100, 44, 122);
+}
+.item-4{
+    background-color: rgb(136, 80, 43);
+}
+.item-5{
+    background-color: rgb(109, 34, 93);
+    grid-row: 1/2;
+}
+.item-6{
+    background-color: rgb(44, 185, 91);
+}
+/*end grid section*/
+
+/* grid-2 section*/
+.grid-container-2{
+    width: 80rem;
+    height: 100vh;
+    background-color: bisque;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+}
+
+.grid-container-2 div{
+    background-color: dodgerblue;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+.sidebar{
+    grid-column: 1/2;
+    grid-row: 2/5;
+}
+
+.main{
+    grid-column: 2/-1;
+    grid-row: 2/4;
+}
+
+.footer{
+    grid-row: 5/5;
+    grid-column: 1/ -1;
+}
+
+/*end grid-2 section*/
