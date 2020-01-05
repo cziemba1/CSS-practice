@@ -212,14 +212,11 @@ body{
     background-color: bisque;
     margin: auto;
     display: grid;
-    grid-template-rows: repeat( 4, 1fr);
-    grid-template-columns: repeat(4,  1fr);
-    grid-template-areas: "header header header header"
-                        "sidebar main main main"
-                        "sidebar box-1 box-2 box-3"
-                        "footer footer footer footer";
     grid-gap: 1rem;
-
+    grid-template-rows: repeat( 4, 70px);
+    grid-template-columns: repeat(4,  70px);
+    justify-content: space-evenly;
+    align-content: center;
 }
 
 .grid-container-2 div{
@@ -228,34 +225,58 @@ body{
     font-size: 1rem;
     padding: 1rem;
     text-align: center;
-}
-
-.header{
-    grid-area: header;
-}
-
-.sidebar{
-    grid-area: sidebar;
-}
-
-.main{
-    grid-area: main;
-}
-
-.box-1{
-    grid-area: box-1;
-}
-
-.box-2{
-    grid-area: box-2;
-}
-
-.box-3{
-    grid-area: box-3;
-}
-
-.footer{
-    grid-area: footer;   
+    width: 50px;
+    height: 50px;
 }
 
 /*end grid-2 section*/
+
+/*grid section-3*/
+.container-grid-1{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat( 5, 1fr 2fr);
+    grid-template-rows: repeat(10, 50px);
+}
+
+.item-g{
+    background-color: royalblue;
+}
+
+.item-g-1{
+    grid-column: 3 / 5;
+}
+
+.item-g-2{
+    grid-column: 5 / -1;
+}
+
+.item-g-5{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item-g-8{
+    grid-row: span 2;
+}
+
+.item-g-15{
+    grid-column: 1/ -1;
+}
+
+.item-g-18{
+    grid-column: span 4 /9;
+}
+
+.item-g-20{
+    grid-row: 4 / span 3;
+}
+
+    
+    /* With Item 1, start at col 3 and go until 5 */
+    /* With Item 2, start at col 5 and go until the end */
+    /* Make Item 5 double span 2 cols and rows */
+    /* Make Item 8 two rows high */
+    /* Make Item 15 span the entire grid width */
+    /* Make item 18 span 4 widths, but end 9 */
+    /* Make item 20 start at row 4 and go for 3 */
