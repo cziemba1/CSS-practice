@@ -272,11 +272,32 @@ body{
     grid-row: 4 / span 3;
 }
 
-    
-    /* With Item 1, start at col 3 and go until 5 */
-    /* With Item 2, start at col 5 and go until the end */
-    /* Make Item 5 double span 2 cols and rows */
-    /* Make Item 8 two rows high */
-    /* Make Item 15 span the entire grid width */
-    /* Make item 18 span 4 widths, but end 9 */
-    /* Make item 20 start at row 4 and go for 3 */
+/*album section*/
+
+.albums{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    background-color: rgb(255, 20, 147);
+}
+
+.album{
+    margin: .5rem ;
+    background-color: rgba(255, 157, 209, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    color: white;
+    font-size: .7rem;
+    font-weight: 100;
+}
+
+.album__artwork{
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.album__details{
+    padding: .5rem;
+}
