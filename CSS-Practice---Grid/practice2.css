@@ -1,0 +1,23 @@
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+img{
+    display: block;
+    width: 100%;
+    padding: 1%;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: red;
+    font-size: 80%;
+    margin-left: 1em;
+}
+
+@supports (display:grid){
+    .watch_out {
+        display: none;
+    }
+}
